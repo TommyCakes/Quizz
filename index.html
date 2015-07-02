@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-	<scriptsrc="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
 </script>
 	<title>Quizz</title>
 </head>
@@ -19,7 +19,7 @@
 		<!-- <h2> How well do you know your country side?</h2> -->
 
 	</div>
-	<h1 contenteditable>How well do you know your country side?</h1>
+	<h1 contenteditable>How well do you know your Cows?</h1>
 	
 	<!-- <div class="ribbon">
   How well do you know your countryside?
@@ -34,9 +34,11 @@
 
 		<div id="content">
 			<div id="info">
-			<button> How to play </button>
-			
-		</div>
+			<button id="howTo"> How to play </button>
+			<p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo debitis accusamus ex placeat. Beatae neque sapiente quisquam animi ipsam, ad perferendis dolores dolor. Autem reiciendis eligendi consequuntur quas quia qui.Good luck and Goodbye!</p>
+			</div>
+		<div id="current-question">
+	</div>
 			<div id="lives">
 			<div class="heart1"><i class="fa fa-heart fa-2x"></i> </div>
 			<div class="heart2"> <i class="fa fa-heart fa-2x"></i></div>
@@ -45,36 +47,125 @@
 
 
 			<!-- <img src="images/cow.png"> -->
-			<section id="quiz">
-			<h2> Question 1: </h2>
-			<p> What is the default color of a Massey Ferguson tractor? </p>
 
-			<button type="radiobutton">
-	</button>  Red
-	<button type="radiobutton"> 
-	</button> Blue
-	<button type="radiobutton"> 
-	</button> Green
-	<button type="radiobutton"> 
-	</button> Yellow
+	<div class="question1">
 
+		Q1: What color is a South Devon cow? 
+		<div class="answers">
+			<p>
+				<input type="radio" name="q1" data-type="1">
+				<label id="q1answer1"></label>
+			</p>
+			<p>
+                <input type="radio" name="q1" data-type="0">
+                <label id="q1answer2"></label>
+            </p>
+             <p>
+                <input type="radio" name="q1" data-type="0">
+                <label id="q1answer3"></label>
+            </p>
+             <p>
+                <input type="radio" name="q1" data-type="0">
+                <label id="q1answer4"></label>
+            </p>
+        </div>
+    </div>
 
-	<input id="answer1" type="radio" data-answer="1">
-	<input id="answer2" type="radio" data-answer="0">
-	<input type="radio" data-answer="0">
-	<input type="radio" data-answer="0">
-</section>
+    <div class="question2 hide">
+    	Q2: Where would you find the breed of cow Wagyu?
+    	<div class="answers">
+    	<p>
+    		<input type="radio" name="q2" data-type="0">
+    		<label id="q2answer1"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q2" data-type="0">
+    		<label id="q2answer2"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q2" data-type="1">
+    		<label id="q2answer3"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q2" data-type="0">
+    		<label id="q2answer4"></label>
+    	</p>
+		</div>
+	</div>
+</div>
+	 <div class="question3 hide">
+    	Q3: kedf?
+    	<div class="answers">
+    	<p>
+    		<input type="radio" name="q3" data-type="0">
+    		<label id="q3answer1"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q3" data-type="0">
+    		<label id="q3answer2"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q3" data-type="1">
+    		<label id="q3answer3"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q3" data-type="0">
+    		<label id="q3answer4"></label>
+    	</p>
+		</div>
+	</div>
+</div>
+ <div class="question4 hide">
+    	Q4: kljaedjhkedf?
+    	<div class="answers">
+    	<p>
+    		<input type="radio" name="q4" data-type="1">
+    		<label id="q4answer1"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q4" data-type="0">
+    		<label id="q4answer2"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q4" data-type="0">
+    		<label id="q4answer3"></label>
+    	</p>
+    	<p>
+    		<input type="radio" name="q4" data-type="0">
+    		<label id="q4answer4"></label>
+    	</p>
+		</div>
+	</div>
 </div>
 
 
+		<!-- <input id="answer1" type="radio" data-answer="1">
+		<input id="answer2" type="radio" data-answer="0">
+		<input type="radio" data-answer="0">
+		<input type="radio" data-answer="0"> -->
+	
 
-<button id="guess"> Guess?</button>
-<img class="speech" src="images/speech.png"/><i class="fa fa-check"></i>
+
+
+
+
+<button id="next">Next</button>
+<img class="speech" src="images/speech.png"/>
+
+<i class="fa fa-check fa-2x"> Well done!</i>
+<i class="fa fa-times fa-2x">Nope!</i>
+
 
 <img class="cow" src="images/cowPro.png"/>
+<!-- cow moos when user answers question and display answer -->
+
+
 
 <hr>
 	</div>
+	
+	<audio id="moo" src="sounds/moo.wav">
+		<audio id="mooWrong" src="sounds/moo-wrong.wav">
 	
 </body>
 </html>

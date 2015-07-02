@@ -5,7 +5,9 @@ body {
 	box-shadow: inset 0 0 100px 20px #80D0CF;
 
 }
-
+.hide {
+	display:none;
+}
 #header {
 	background-color: #0FADC0;
 	height: 100px;
@@ -24,33 +26,51 @@ h3{
 }
 #content {
 	margin-top:20px;
-	height:500px;
+	height:550px;
 	/*background-color:#AEDD94;*/
 	border: 1px dotted grey;
+	margin-left: 80px;
+	margin-right: 80px
+	
 }
 #lives {
 	color:#E61610;
 	padding:20px;
 	margin: 0px auto;
-	margin-top:120px;
+	margin-top:100px;
+
 
 }
 .heart1, .heart2, .heart3  {
 	display:inline-block;
+	margin-bottom:10px;
 }
 #info > button {
 	float:left;
 	width:100px;
 	height:60px;
 	border-radius: 10%;
-	margin-left:100px;
+	margin-left:10px;
 	margin-top:20px;
+}
+.answers  {
+	
+	display:block;
+	margin-right: 30px;
 }
 input {
 	margin-bottom: 50px;
 	margin-left: 30px;
+	display:inline-block;
 }
-#guess {
+#current-question {
+	text-align:center;
+	font-size:30px;
+	padding:0;
+	margin-right:110px;
+	
+}
+#next {
 	width:100px;
 	height:20px;
 	border-radius: 10%;
@@ -59,6 +79,18 @@ input {
 	margin: 0px auto;
 	margin-top:20px;
 
+}
+.fa-check, .fa-times {
+
+	float:right;
+	color:green;
+	z-index:10;
+	margin-right:-262px;
+	margin-top: -34px;
+}
+.fa-times {
+	color:red;
+	margin-right:-180px;
 }
 .cow {
 		float:right;
@@ -74,9 +106,10 @@ input {
 }
 .speech {
 	float:right;
-	margin-top: -104px;
-	height:160px;
-	width:350px;
+	margin-top: -54px;
+	height:90px;
+	width:300px;
+	clear:right;
 
 }
 hr {
@@ -177,161 +210,3 @@ h1, h1:before, h1:after {
 	/*Fix to make the borders appear on the ribbon ends also*/
 	background-origin: border-box;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-./*ribbon {
-  width: 400px;
-  height: 80px;
-  margin: 0 auto;
-  margin-top: -60px;
-  position: relative;
-  color: #fff;
-  font: 28px/40px sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  background: #3D79D0;
-  
-  -webkit-animation: main 250ms;
-  -moz-animation: main 250ms;
-  -ms-animation: main 250ms;
-  animation: main 250ms;
-}
-
-.ribbon i {
-  position: absolute;
-}
-
-.ribbon i:first-child, .ribbon i:nth-child(2) {
-  position: absolute;
-  left: -20px;
-  bottom: -20px;
-  z-index: -1;
-  border: 20px solid transparent;
-  border-right-color: #043140;
-  
-  -webkit-animation: edge 500ms;
-  -moz-animation: edge 500ms;
-  -ms-animation: edge 500ms;
-  animation: edge 500ms;
-}
-
-.ribbon i:nth-child(2) {
-  left: auto;
-  right: -20px;
-  border-right-color: transparent;
-  border-left-color: #043140;
-}
-
-.ribbon i:nth-child(3), .ribbon i:last-child {
-  width: 20px;
-  bottom: -20px;
-  left: -60px;
-  z-index: -2;
-  border: 30px solid #1D53C0;
-  border-left-color: transparent;
-  
-  -webkit-animation: back 600ms;
-  -moz-animation: back 600ms;
-  -ms-animation: back 600ms;
-  animation: back 600ms;
-  
-  -webkit-transform-origin: 100% 0;
-  -moz-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
-  transform-origin: 100% 0;
-}
-
-.ribbon i:last-child {
-  bottom: -20px;
-  left: auto;
-  right: -60px;
-  border: 30px solid #1D53C0;
-  border-right-color: transparent;
-
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
-p {
-  text-align: center;
-  color: #aaa;
-}
-
-/* animations */
-
-/*@-webkit-keyframes main {
-  0% { -webkit-transform: scaleX(0); }
-  100% { -webkit-transform: scaleX(1); }
-}
-
-@-webkit-keyframes edge {
-  0%, 50% { -webkit-transform: scaleY(0); }
-  100% { -webkit-transform: scaleY(1); }
-}
-
-@-webkit-keyframes back {
-  0%, 75% { -webkit-transform: scaleX(0); }
-  100% { -webkit-transform: scaleX(1); }
-}
-
-
-@-moz-keyframes main {
-  0% { -moz-transform: scaleX(0); }
-  100% { -moz-transform: scaleX(1); }
-}
-
-@-moz-keyframes edge {
-  0%, 50% { -moz-transform: scaleY(0); }
-  100% { -moz-transform: scaleY(1); }
-}
-
-@-moz-keyframes back {
-  0%, 75% { -moz-transform: scaleX(0); }
-  100% { -moz-transform: scaleX(1); }
-}
-
-
-@keyframes main {
-  0% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
-}
-
-@keyframes edge {
-  0%, 50% { transform: scaleY(0); }
-  100% { transform: scaleY(1); }
-}
-
-@keyframes back {
-  0%, 75% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
-}
-*/
-
-*/
