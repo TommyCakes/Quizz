@@ -41,7 +41,7 @@ h3{
 
 
 }
-.heart1, .heart2, .heart3  {
+#heart1, #heart2, #heart3  {
 	display:inline-block;
 	margin-bottom:10px;
 }
@@ -67,7 +67,7 @@ input {
 	text-align:center;
 	font-size:30px;
 	padding:0;
-	margin-right:110px;
+	/*margin-right:110px;*/
 	
 }
 #next {
@@ -80,7 +80,7 @@ input {
 	margin-top:20px;
 
 }
-.fa-check, .fa-times {
+.fa-check, .fa-times, .fa-thumbs-o-down {
 
 	float:right;
 	color:green;
@@ -91,6 +91,9 @@ input {
 .fa-times {
 	color:red;
 	margin-right:-180px;
+}
+.fa-thumbs-o-down {
+	color:red;
 }
 .cow {
 		float:right;
@@ -118,6 +121,12 @@ hr {
    background-color: #91E4FB;
    margin-bottom:-100px;
 
+}
+#me {
+	color:grey;
+	opacity: 0.6;
+	margin: 0px auto;
+	clear:right;
 }
 
 h1 {

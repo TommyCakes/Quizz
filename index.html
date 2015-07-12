@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js/app.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
 </script>
-	<title>Quizz</title>
+	<title>Cow Quizz</title>
 </head>
 <body>
 
@@ -33,16 +33,16 @@
 <!-- PrefixFree to deal with vendor prefixes -->
 
 		<div id="content">
-			<div id="info">
+			<!-- <div id="info">
 			<button id="howTo"> How to play </button>
 			<p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo debitis accusamus ex placeat. Beatae neque sapiente quisquam animi ipsam, ad perferendis dolores dolor. Autem reiciendis eligendi consequuntur quas quia qui.Good luck and Goodbye!</p>
-			</div>
+			</div> -->
 		<div id="current-question">
 	</div>
 			<div id="lives">
-			<div class="heart1"><i class="fa fa-heart fa-2x"></i> </div>
-			<div class="heart2"> <i class="fa fa-heart fa-2x"></i></div>
-			<div class="heart3"><i class="fa fa-heart fa-2x"></i> </div>
+			<div id="heart1"><i class="fa fa-heart fa-2x"></i> </div>
+			<div id="heart2"> <i class="fa fa-heart fa-2x"></i></div>
+			<div id="heart3"><i class="fa fa-heart fa-2x"></i> </div>
 		</div>
 
 
@@ -92,9 +92,9 @@
     	</p>
 		</div>
 	</div>
-</div>
+
 	 <div class="question3 hide">
-    	Q3: kedf?
+    	Q3: How many stomachs does a cow have?
     	<div class="answers">
     	<p>
     		<input type="radio" name="q3" data-type="0">
@@ -105,25 +105,25 @@
     		<label id="q3answer2"></label>
     	</p>
     	<p>
-    		<input type="radio" name="q3" data-type="1">
+    		<input type="radio" name="q3" data-type="0">
     		<label id="q3answer3"></label>
     	</p>
     	<p>
-    		<input type="radio" name="q3" data-type="0">
+    		<input type="radio" name="q3" data-type="1">
     		<label id="q3answer4"></label>
     	</p>
 		</div>
 	</div>
-</div>
+
  <div class="question4 hide">
-    	Q4: kljaedjhkedf?
+    	Q4: Whats the furthest a bull has ever swum?
     	<div class="answers">
     	<p>
-    		<input type="radio" name="q4" data-type="1">
+    		<input type="radio" name="q4" data-type="0">
     		<label id="q4answer1"></label>
     	</p>
     	<p>
-    		<input type="radio" name="q4" data-type="0">
+    		<input type="radio" name="q4" data-type="1">
     		<label id="q4answer2"></label>
     	</p>
     	<p>
@@ -150,10 +150,12 @@
 
 
 <button id="next">Next</button>
+<button id="reset" class="hide"> <i class="fa fa-repeat fa-2x"></i>Start Over</button>
 <img class="speech" src="images/speech.png"/>
 
 <i class="fa fa-check fa-2x"> Well done!</i>
 <i class="fa fa-times fa-2x">Nope!</i>
+<i class="fa fa-thumbs-o-down fa-2x"> Game over!</i>
 
 
 <img class="cow" src="images/cowPro.png"/>
@@ -162,10 +164,14 @@
 
 
 <hr>
+
 	</div>
+    <p id="me"> Created by Tom Warhurst</p>
 	
 	<audio id="moo" src="sounds/moo.wav">
-		<audio id="mooWrong" src="sounds/moo-wrong.wav">
+	<audio id="mooWrong" src="sounds/moo-wrong.wav">
+        <audio id="neigh" src="sounds/Neigh.mp3" ></audio>
+
 	
 </body>
 </html>
